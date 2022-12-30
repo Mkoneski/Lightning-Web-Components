@@ -1,0 +1,55 @@
+<template>
+    <div class="slds-var-m-around_large">
+
+        <h1>Hello, again, you</h1>
+
+        <lightning-input label="Type here" value={inputText} onchange = {changeOnInput}>
+           
+        </lightning-input>
+
+       <p>
+        {greting}
+       </p>
+
+       <p>
+        {inputText}
+       </p>
+
+       <lightning-button label="Click to see Accounts" onclick={handleClick}>
+        
+       </lightning-button>
+
+       <div class="slds-var-m-around_large">
+        <template for:each={result} for:item="contact">
+            <p key = {contact.Id}>
+                    {contact.Name}
+            </p>
+        </template>
+       </div>
+
+       <div>
+        <h1>Some Accounts</h1>
+        <div>
+            <template for:each={resultacc} for:item="account">
+                <p key = {account.id}>
+                    {account.id}
+                </p>
+            </template>
+        </div>
+       </div>
+
+       <div>
+        <lightning-button label="Click to see Contacts" onclick={handleClickForCon}>
+            
+        </lightning-button>
+        <div class="slds-var-m-around_large">
+            <template for:each={result} for:item="contact">
+                <p key = {contact.Id}>
+                        {contact.Name}
+                </p>
+            </template>
+           </div>
+       </div>
+
+    </div>
+</template>
